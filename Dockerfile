@@ -1,1 +1,7 @@
-FROM nginx:alpine\n\nCOPY ./public /usr/share/nginx/html\n\nEXPOSE 80\n\nCMD ["nginx", "-g", "daemon off;"]
+FROM nginx:alpine
+
+COPY ./public /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
